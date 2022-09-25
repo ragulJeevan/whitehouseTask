@@ -1,0 +1,168 @@
+
+<mat-toolbar color="primary">
+  <div>WHITE HOUSE TASK</div>
+</mat-toolbar>
+<div class="container my-4 col-md  ">
+  <!--tabs-->
+  <mat-tab-group>
+    <mat-tab label="chennai">
+      <!--chennai table-->
+      <div class="text-center my-2 bg-secondary"><h1><b>CHENNAI TABLE CONTENT</b></h1></div>
+  <table class="table table-bordered ">
+    <thead>
+      <tr>
+        <th>S NO</th>
+        <th>ITEM1</th>
+        <th>ITEM2</th>
+        <th>ITEM3</th>
+        <th class="text-center"><button class="btn btn-primary" (click)="addTable()">Add Row</button></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i = index;let r of row">
+        <td>{{i+1}}</td>
+        <td><input type="number" [(ngModel)]="r.item1">
+          <span *ngIf="item1Total()>10000" class="alert text-danger alert-danger">*Limit exceeded please check the input</span>
+        </td>
+        <td><input type="number" [(ngModel)]="r.item2"> 
+          <span *ngIf="item2Total()>10000" class="alert text-danger alert-danger">*Limit exceeded please check the input</span>
+        </td>
+        <td><input type="number" [(ngModel)]="r.item3">
+          <span *ngIf="item3Total()>10000" class="alert text-danger alert-danger">*Limit exceeded please check the input</span>
+        </td>
+        <td><button class="btn"  (click)="addTable()"><mat-icon color="primary">add</mat-icon></button> <button class="btn" (click)="deleteRow(i)" ><mat-icon class="text-danger">delete</mat-icon></button></td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td><b>TOTAL</b></td>
+        <td>{{item1Total()}}</td>
+        <td>{{item2Total()}}</td>
+        <td>{{item3Total()}}</td>
+        <td></td>
+      </tr>
+    </tfoot>
+  </table>
+    </mat-tab>
+    <mat-tab label="banglore">
+       <!--banglore table-->
+       <div class="text-center my-2 bg-secondary"><h1><b>BANGLORE TABLE CONTENT</b></h1></div>
+       <table class="table table-bordered ">
+         <thead>
+           <tr>
+             <th>S NO</th>
+             <th>ITEM1</th>
+             <th>ITEM2</th>
+             <th>ITEM3</th>
+             <th class="text-center"><button (click)="addTable()" class="btn btn-primary">Add Row</button></th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr *ngFor="let i = index;let r of row">
+             <td>{{i+1}}</td>
+             <td><input type="number" [(ngModel)]="r.item1">
+               <span *ngIf="item1Total()>10000" class="alert text-danger alert-danger">*Limit exceeded please check the input</span>
+             </td>
+             <td><input type="number" [(ngModel)]="r.item2"> 
+               <span *ngIf="item2Total()>10000" class="alert text-danger alert-danger">*Limit exceeded please check the input</span>
+             </td>
+             <td><input type="number" [(ngModel)]="r.item3">
+               <span *ngIf="item3Total()>10000" class="alert text-danger alert-danger">*Limit exceeded please check the input</span>
+             </td>
+             <td><button class="btn"  (click)="addTable()"><mat-icon color="primary">add</mat-icon></button> <button class="btn" (click)="deleteRow(i)" ><mat-icon class="text-danger">delete</mat-icon></button></td>
+           </tr>
+         </tbody>
+         <tfoot>
+           <tr>
+             <td><b>TOTAL</b></td>
+             <td>{{item1Total()}}</td>
+             <td>{{item2Total()}}</td>
+             <td>{{item3Total()}}</td>
+             <td></td>
+           </tr>
+         </tfoot>
+       </table>
+     
+    </mat-tab>
+    <mat-tab label="Kochi">
+       <!--kochi table-->
+       <div class="text-center my-2 bg-secondary"><h1><b>KOCHI TABLE CONTENT</b></h1></div>
+       <table class="table table-bordered ">
+         <thead>
+           <tr>
+             <th>S NO</th>
+             <th>ITEM1</th>
+             <th>ITEM2</th>
+             <th>ITEM3</th>
+             <th class="text-center"><button (click)="addTable()" class="btn btn-primary">Add Row</button></th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr *ngFor="let i = index;let r of row">
+             <td>{{i+1}}</td>
+             <td><input type="number" [(ngModel)]="r.item1">
+               <span *ngIf="item1Total()>10000" class="alert text-danger alert-danger">*Limit exceeded please check the input</span>
+             </td>
+             <td><input type="number" [(ngModel)]="r.item2"> 
+               <span *ngIf="item2Total()>10000" class="alert text-danger alert-danger">*Limit exceeded please check the input</span>
+             </td>
+             <td><input type="number" [(ngModel)]="r.item3">
+               <span *ngIf="item3Total()>10000" class="alert text-danger alert-danger">*Limit exceeded please check the input</span>
+             </td>
+             <td><button class="btn"  (click)="addTable()"><mat-icon color="primary">add</mat-icon></button> <button class="btn" (click)="deleteRow(i)" ><mat-icon class="text-danger">delete</mat-icon></button></td>
+           </tr>
+         </tbody>
+         <tfoot>
+           <tr>
+             <td><b>TOTAL</b></td>
+             <td>{{item1Total()}}</td>
+             <td>{{item2Total()}}</td>
+             <td>{{item3Total()}}</td>
+             <td></td>
+           </tr>
+         </tfoot>
+       </table>
+     
+    </mat-tab>
+    <mat-tab label="Mumbai">
+       <!--mumbai table-->
+       <div class="text-center my-2 bg-secondary"><h1><b>MUMBAI TABLE CONTENT</b></h1></div>
+       <table class="table table-bordered ">
+         <thead>
+           <tr>
+             <th>S NO</th>
+             <th>ITEM1</th>
+             <th>ITEM2</th>
+             <th>ITEM3</th>
+             <th class="text-center"><button (click)="addTable()" class=" btn btn-primary">Add Row</button></th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr *ngFor="let i = index;let r of row">
+             <td>{{i+1}}</td>
+             <td><input type="number" [(ngModel)]="r.item1">
+               <span *ngIf="item1Total()>10000" class="alert text-danger alert-danger">*Limit exceeded please check the input</span>
+             </td>
+             <td><input type="number" [(ngModel)]="r.item2"> 
+               <span *ngIf="item2Total()>10000" class="alert text-danger alert-danger">*Limit exceeded please check the input</span>
+             </td>
+             <td><input type="number" [(ngModel)]="r.item3">
+               <span *ngIf="item3Total()>10000" class="alert text-danger alert-danger">*Limit exceeded please check the input</span>
+             </td>
+             <td><button class="btn"  (click)="addTable()"><mat-icon color="primary">add</mat-icon></button> <button class="btn" (click)="deleteRow(i)" ><mat-icon class="text-danger">delete</mat-icon></button></td>
+           </tr>
+         </tbody>
+         <tfoot>
+           <tr>
+             <td><b>TOTAL</b></td>
+             <td>{{item1Total()}}</td>
+             <td>{{item2Total()}}</td>
+             <td>{{item3Total()}}</td>
+             <td></td>
+           </tr>
+         </tfoot>
+       </table>
+     
+    </mat-tab>
+  </mat-tab-group>  
+</div>
