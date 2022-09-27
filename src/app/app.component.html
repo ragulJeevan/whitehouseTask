@@ -30,7 +30,7 @@
         <td><input type="number" [(ngModel)]="r.item3">
           <span *ngIf="item3Total(rowC)>10000" class="alert text-danger alert-danger">*Limit exceeded please check the input</span>
         </td>
-        <td><button class="btn"  (click)="addTable(rowC)"><mat-icon color="primary">add</mat-icon></button> <button class="btn" (click)="deleteRow(i)" ><mat-icon class="text-danger">delete</mat-icon></button></td>
+        <td><button class="btn"  (click)="addTable(rowC)"><mat-icon color="primary">add</mat-icon></button> <button class="btn" (click)="deleteRow(rowC,i)" ><mat-icon class="text-danger">delete</mat-icon></button></td>
       </tr>
     </tbody>
     <tfoot>
@@ -69,7 +69,7 @@
             <td><input type="number" [(ngModel)]="r.item3">
               <span *ngIf="item3Total(rowB)>10000" class="alert text-danger alert-danger">*Limit exceeded please check the input</span>
             </td>
-            <td><button class="btn"  (click)="addTable(rowB)"><mat-icon color="primary">add</mat-icon></button> <button class="btn" (click)="deleteRow(i)" ><mat-icon class="text-danger">delete</mat-icon></button></td>
+            <td><button class="btn"  (click)="addTable(rowB)"><mat-icon color="primary">add</mat-icon></button> <button class="btn" (click)="deleteRow(rowB,i)" ><mat-icon class="text-danger">delete</mat-icon></button></td>
           </tr>
         </tbody>
         <tfoot>
@@ -109,7 +109,7 @@
             <td><input type="number" [(ngModel)]="r.item3">
               <span *ngIf="item3Total(rowK)>10000" class="alert text-danger alert-danger">*Limit exceeded please check the input</span>
             </td>
-            <td><button class="btn"  (click)="addTable(rowK)"><mat-icon color="primary">add</mat-icon></button> <button class="btn" (click)="deleteRow(i)" ><mat-icon class="text-danger">delete</mat-icon></button></td>
+            <td><button class="btn"  (click)="addTable(rowK)"><mat-icon color="primary">add</mat-icon></button> <button class="btn" (click)="deleteRow(rowK,i)" ><mat-icon class="text-danger">delete</mat-icon></button></td>
           </tr>
         </tbody>
         <tfoot>
@@ -138,7 +138,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let i = index;let r of rowK">
+          <tr *ngFor="let i = index;let r of rowM">
             <td>{{i+1}}</td>
             <td><input type="number" [(ngModel)]="r.item1">
               <span *ngIf="item1Total(rowM)>10000" class="alert text-danger alert-danger">*Limit exceeded please check the input</span>
@@ -149,7 +149,7 @@
             <td><input type="number" [(ngModel)]="r.item3">
               <span *ngIf="item3Total(rowM)>10000" class="alert text-danger alert-danger">*Limit exceeded please check the input</span>
             </td>
-            <td><button class="btn"  (click)="addTable(rowM)"><mat-icon color="primary">add</mat-icon></button> <button class="btn" (click)="deleteRow(i)" ><mat-icon class="text-danger">delete</mat-icon></button></td>
+            <td><button class="btn"  (click)="addTable(rowM)"><mat-icon color="primary">add</mat-icon></button> <button class="btn" (click)="deleteRow(rowM,i)" ><mat-icon class="text-danger">delete</mat-icon></button></td>
           </tr>
         </tbody>
         <tfoot>

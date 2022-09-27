@@ -45,9 +45,21 @@ export class AppComponent implements OnInit{
     }
     item.push(obj);
   }
-  deleteRow(x:any){
-    this.rowC.splice(x, 1 );
-  }
+  // deleteRowC(x:any){
+  //   this.rowC.splice(x, 1 );
+  // }
+  // deleteRowB(x:any){
+  //   this.rowB.splice(x, 1 );
+  // }
+  // deleteRowK(x:any){
+  //   this.rowK.splice(x, 1 );
+  // }
+  // deleteRowM(x:any){
+  //   this.rowM.splice(x, 1 );
+  // }
+  deleteRow(item:any,x:any){
+      item.splice(x, 1 );
+     }
   item1Total(item:any){
    return item.map((a:any)=>{return a.item1}).reduce((a:any,b:any)=>{
     return b+a;
